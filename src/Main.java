@@ -1,11 +1,15 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
 
+        double farr = 0;
+        while (farr > -460){
+            farr = userInput();
+            double celc = math(farr);
+            print(celc);
+        }
 
-        userInput();
 
 
         //while(){
@@ -16,14 +20,24 @@ public class Main {
 
 
     }
-
-    static void userInput(){
+    static double userInput(){
         Scanner input = new Scanner(System.in);
         System.out.println("please give me a Fahrenheit: ");
-        int num = input.nextInt();
+        double farr = input.nextInt();
+        return farr;
+
         //System.out.println(num);
     }
-    
+
+    static double math(double farr){
+        double celc = ((farr - 32)*5/9);
+        return celc;
+    }
+
+
+    static void print(double celc){
+        System.out.println(celc);
+    }
 
 
 }
